@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -15,66 +14,99 @@
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <section class="wapper">
-        <section class="container">
+      <section class="wrapper">
+        <div class="container">
           <img
             class="logo"
             src="assets/images/illustration-sign-up-desktop.svg"
             alt="illustration-sign-up-desktop"
           />
-        <h1 class="title">Stay updated!</h1>
+          <h1 class="title">Stay updated!</h1>
 
-        <p>
-          Join 60,000+ product managers receiving monthly updates on: 
-          <ul> <li> <img class="icon-list" src="./assets/images/icon-list.svg" alt="icon-list"> Product
-          discovery and building what matters </li><li> <img class="icon-list" src="./assets/images/icon-list.svg" alt="icon-list">Measuring to ensure updates are a
-          success </li> <li> <img class="icon-list" src="./assets/images/icon-list.svg" alt="icon-list">And much more!</li>
-          </ul>
-        </p>
-        <form class="form" action="#" method="post">
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="email@company.com" required />
-          <button type="submit">Subscribe to monthly newsletter</button>
-          
-          <p class="error-message">Please provide a valid email address</p>
-          <p class="success-message">Thank you for subscribing!</p>
-          <p class="privacy-policy">
-            We care about the protection of your data. Read our
-            <a href="#">Privacy Policy</a>.
+          <p class="description">
+            Join 60,000+ product managers receiving monthly updates on:
           </p>
-        </form>
+          <ul class="features">
+            <li>
+              <img
+                class="icon-list"
+                src="./assets/images/icon-list.svg"
+                alt="icon-list"
+              />
+              Product discovery and building what matters
+            </li>
+            <li>
+              <img
+                class="icon-list"
+                src="./assets/images/icon-list.svg"
+                alt="icon-list"
+              />Measuring to ensure updates are a success
+            </li>
+            <li>
+              <img
+                class="icon-list"
+                src="./assets/images/icon-list.svg"
+                alt="icon-list"
+              />And much more!
+            </li>
+          </ul>
+
+          <form class="form" method="post">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email@company.com"
+              required
+            />
+            <button type="submit">Subscribe to monthly newsletter</button>
+
+            <p class="error-message" aria-live="polite">
+              Please provide a valid email address
+            </p>
+            <p class="sucess-message hidden" aria-live="polite">
+              <img
+                class="icon-list"
+                src="./assets/images/icon-list.svg"
+                alt="icon-list"
+              />
+              Thank you for subscribing!
+            </p>
+            <p class="privacy-policy">
+              We care about the protection of your data. Read our
+              <a href="#">Privacy Policy</a>.
+            </p>
+          </form>
+        </div>
       </section>
+
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
-      <section class="success-message">
-        Thanks for subscribing! A confirmation email has been sent to
-        ash@loremcompany.com. Please open it and click the button inside to
-        confirm your subscription. Dismiss message
+      <section class="confiramtion-message hidden">
+        <p>
+          <strong> Thanks for subscribing!</strong><br />
+          A confirmation email has been sent to
+          <stong> ash@loremcompany.com. </stong>Please open it and click the
+          button inside to confirm your subscription.
+        </p>
+        <button class="dismiss-button">Dismiss message</button>
       </section>
-      <!-- Success message end -->
-      <footer>
-        <div class="attribution">
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by <a href="#">Your Name Here</a>.
-        </div>
-      </footer>
     </main>
+
+    <!-- Success message end -->
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Zamzam M.</a>.
+      </div>
+    </footer>
   </body>
 </html>
