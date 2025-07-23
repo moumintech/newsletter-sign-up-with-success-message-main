@@ -21,8 +21,13 @@ body {
   flex-direction: row;
   align-items: stretch;
   justify-content: space-between;
-  max-width: 850px;
+  max-width: 1100px;
   width: 100%;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+  box-shadow: 0 20px 40px hsl(235, 18%, 26%);
+  overflow: hidden;
 }
 
 .container {
@@ -32,12 +37,10 @@ body {
   flex-direction: column;
   justify-content: center;
   background-color: hsl(0, 0%, 100%);
-  border-radius: 15px;
-
-  box-shadow: 0 20px 40px hsl(235, 18%, 26%);
+  border-radius: 15px 0 0 15px;
 }
 
-.logo {
+.logo img {
   flex: 1;
   width: 100%;
   height: auto;
@@ -45,7 +48,6 @@ body {
   display: block;
 }
 
-/* Partie formulaire (gauche) */
 .container > *:not(.logo) {
   padding: 0rem;
 }
@@ -97,7 +99,7 @@ body {
 
 .form button {
   width: 100%;
-  background-color: #1f2235;
+  background-color: #111430;
   color: #ffffff;
   padding: 0.75rem;
   border: none;
@@ -108,7 +110,7 @@ body {
 }
 
 .form button:hover {
-  background-color: #111430;
+  background-color: hsl(4, 100%, 67%);
 }
 
 .error-message {
