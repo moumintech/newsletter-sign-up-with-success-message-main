@@ -182,3 +182,24 @@ body {
 .confirmation-message button:hover {
   background-color: #111430;
 }
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+  }
+
+  .logo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .form input[type="email"] {
+    margin-bottom: 1rem;
+  }
+}
