@@ -182,7 +182,7 @@ body {
 .confirmation-message button:hover {
   background-color: #111430;
 }
-@media (max-width: 768px) {
+@media (max-width: 375px) {
   .wrapper {
     flex-direction: column;
     align-items: center;
