@@ -1,5 +1,7 @@
 // @ts-nocheck
 
+// @ts-nocheck
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".form");
   const emailInput = document.querySelector(".email-input");
@@ -7,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmationMessage = document.querySelector(".confirmation-message");
   const insertedEmail = document.querySelector(".inserted-email");
   const dismissButton = document.querySelector(".dismiss-button");
+  const wrapper = document.getElementById("wrapper"); // ← déplace ici !
 
   if (
     form instanceof HTMLFormElement &&
@@ -14,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     errorMessage &&
     confirmationMessage &&
     insertedEmail &&
-    dismissButton
+    dismissButton &&
+    wrapper
   ) {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -26,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         errorMessage.classList.add("hidden");
 
         form.classList.add("hidden");
-        const wrapper = document.getElementById("wrapper");
         wrapper.classList.add("hidden");
 
         confirmationMessage.classList.remove("hidden");
