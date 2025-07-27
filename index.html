@@ -22,7 +22,7 @@
   </head>
   <body>
     <main>
-      <section class="wrapper">
+      <section id="wrapper" class="wrapper">
         <div class="container">
           <h1 class="title">Stay updated!</h1>
 
@@ -54,12 +54,13 @@
             </li>
           </ul>
 
-          <form class="form" method="post">
+          <form class="form" id="form" action="#" method="POST">
             <label for="email">Email address</label>
             <input
               type="email"
               id="email"
               name="email"
+              class="email-input"
               placeholder="email@company.com"
               required
             />
@@ -68,14 +69,7 @@
             <p class="error-message" aria-live="polite">
               Please provide a valid email address
             </p>
-            <p class="sucess-message hidden" aria-live="polite">
-              <img
-                class="icon-list"
-                src="./assets/images/icon-list.svg"
-                alt="icon-list"
-              />
-              Thank you for subscribing!
-            </p>
+
             <p class="privacy-policy">
               We care about the protection of your data. Read our
               <a href="#">Privacy Policy</a>.
@@ -89,21 +83,18 @@
         />
       </section>
 
-      <!-- Sign-up form end -->
-
-      <!-- Success message start -->
-      <section class="confiramtion-message hidden">
+      <section class="confirmation-message hidden">
+        <img src="./assets/images/icon-success.svg" alt="icon-success" />
+        <h1 class="title">Thanks for subscribing!</h1>
         <p>
-          <strong> Thanks for subscribing!</strong><br />
           A confirmation email has been sent to
-          <stong> ash@loremcompany.com. </stong>Please open it and click the
-          button inside to confirm your subscription.
+          <strong class="inserted-email"> ash@loremcompany.com. </strong>Please
+          open it and click the button inside to confirm your subscription.
         </p>
         <button class="dismiss-button">Dismiss message</button>
       </section>
     </main>
 
-    <!-- Success message end -->
     <!--   <footer>
       <div class="attribution">
         Challenge by
@@ -112,6 +103,6 @@
         >. Coded by <a href="#">Zamzam M.</a>.
       </div>
     </footer>-->
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
