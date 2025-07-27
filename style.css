@@ -114,15 +114,14 @@ body {
 .form button:hover {
   background-color: hsl(4, 100%, 67%);
 }
-
 .error-message {
+  display: none;
   color: #fa5959;
   font-size: 0.9rem;
   margin-top: 0.5rem;
-  display: none;
 }
 
-.form input:invalid + .error-message {
+.error-message.visible {
   display: block;
 }
 
@@ -149,7 +148,6 @@ body {
   text-decoration: underline;
 }
 
-.confirmation-message,
 .hidden {
   display: none;
   background-color: #ffffff;
@@ -160,14 +158,18 @@ body {
   margin: 0 auto;
 }
 
-.confirmation-message.hidden {
+.hidden {
   display: none;
 }
 
-.confirmation-message p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #1f2235;
+.confirmation-message {
+  max-width: 420px;
+  margin: 5rem auto;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .confirmation-message button {
@@ -189,19 +191,22 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    margin: 0 auto;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .container {
     width: 100%;
     border-radius: 15px;
-    margin-bottom: 2rem;
+    margin: 0;
     padding: 0;
   }
   .logo1 {
     display: block;
     width: 100%;
-    height: auto;
     margin-bottom: 1rem;
   }
 
